@@ -1,0 +1,525 @@
+@import url(fontawesome/css/all.css);
+@import url(https://unpkg.com/aos@2.3.1/dist/aos.css);
+
+html{
+	scroll-behavior: smooth;
+}
+*{
+	list-style: none;
+	padding: 0;
+}
+
+body{
+	margin:0;
+	padding: 0;
+	font-family: sans-serif;
+	background-image: url('back.jpg');
+  	background-size: cover;
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-attachment: fixed;
+}
+section{
+	height: 25vh;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+#cv{
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+#cv {
+  border-color: #f44336;
+  color: red
+}
+
+#cv:hover {
+  background: #f44336;
+  color: white;
+}
+#albert {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 250px;
+}
+
+#albert:hover {
+  box-shadow: 0 0 3px 5px rgba(120, 120, 120, 120);
+}
+
+.footer{
+	text-align: center;
+	size: 3em;
+	border-color: black;
+	color:white;
+	border-bottom-color: coral;
+}
+.masthead {
+  height: 50vh;
+  min-height: 150px;
+  transition: .5s;
+}
+#header {
+		align-items: center;
+		display: flex;		
+		-webkit-flex-direction: column;
+		transition: .5s;
+	}
+		#header a {
+			color: #080808;
+			border-color: #080808 !important
+		}
+
+			#header a:hover {
+				border-bottom-color: transparent;
+				color: #18bfef !important;
+			}
+
+		#header .logo {
+			transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
+			border-style: solid;
+			border-color: #ffffff;
+			border-width: 5px !important;
+			font-family: "Source Sans Pro", Helvetica, sans-serif;
+			font-size: 2.25rem;
+			font-weight: 900;
+			letter-spacing: 0.1em;
+			padding: 1rem;
+			text-transform: uppercase;
+			visibility: visible;
+		}
+			#header .logo:hover {
+				border-color: #18bfef !important;
+				color: #18bfef !important;
+			}
+		@media screen and (max-width: 980px) {
+			#header {
+				height: 14rem;
+				padding-bottom: 4rem;
+			}
+		}
+
+		@media screen and (max-width: 736px) {
+
+			#header {
+				padding-bottom: 3rem;
+			}
+
+				#header .logo {
+					font-size: 1.75rem;
+					border-width: 3px !important;
+				}
+
+		}
+#bod{
+	transition: .5s;
+}
+
+h2, h3, h4, h5, h6 {
+  color: #3D4351;
+  margin-top: 0;
+}
+
+a {
+  color: #FF6B6B;
+}
+a:hover {
+  color: #ff9a9a;
+  text-decoration: none;
+}
+
+
+.example-title {
+  text-align: center;
+  margin-bottom: 60px;
+  padding: 3em 0;
+  border-bottom: 1px solid #E4EAEC;
+}
+.example-title p {
+  margin: 0 auto;
+  font-size: 16px;
+  max-width: 400px;
+}
+
+/*==================================
+    TIMELINE
+==================================*/
+/*-- GENERAL STYLES
+------------------------------*/
+.timeline {
+  line-height: 1.4em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+ 
+}
+.timeline h1, .timeline h2, .timeline h3, .timeline h4, .timeline h5, .timeline h6 {
+  line-height: inherit;
+}
+
+/*----- TIMELINE ITEM -----*/
+.timeline-item {
+  padding-left: 40px;
+  position: relative;
+}
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+/*----- TIMELINE INFO -----*/
+.timeline-info {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin: 0 0 .5em 0;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/*----- TIMELINE MARKER -----*/
+.timeline-marker {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 15px;
+}
+.timeline-marker:before {
+  background: #FF6B6B;
+  border: 3px solid transparent;
+  border-radius: 100%;
+  content: "";
+  display: block;
+  height: 15px;
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 15px;
+  transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+.timeline-marker:after {
+  content: "";
+  width: 3px;
+  background: #CCD5DB;
+  display: block;
+  position: absolute;
+  top: 24px;
+  bottom: 0;
+  left: 6px;
+}
+.timeline-item:last-child .timeline-marker:after {
+  content: none;
+}
+
+.timeline-item:not(.period):hover .timeline-marker:before {
+  background: transparent;
+  border: 3px solid #FF6B6B;
+}
+
+/*----- TIMELINE CONTENT -----*/
+.timeline-content {
+  padding-bottom: 40px;
+}
+.timeline-content p:last-child {
+  margin-bottom: 0;
+}
+
+
+/*----------------------------------------------
+    MOD: TIMELINE SPLIT
+----------------------------------------------*/
+@media (min-width: 768px) {
+  .timeline-split .timeline, .timeline-centered .timeline {
+    display: table;
+  }
+  .timeline-split .timeline-item, .timeline-centered .timeline-item {
+    display: table-row;
+    padding: 0;
+  }
+  .timeline-split .timeline-info, .timeline-centered .timeline-info,
+  .timeline-split .timeline-marker,
+  .timeline-centered .timeline-marker,
+  .timeline-split .timeline-content,
+  .timeline-centered .timeline-content,
+  .timeline-split .period .timeline-info,
+  .timeline-centered .period .timeline-info {
+    display: table-cell;
+    vertical-align: top;
+  }
+  .timeline-split .timeline-marker, .timeline-centered .timeline-marker {
+    position: relative;
+  }
+  .timeline-split .timeline-content, .timeline-centered .timeline-content {
+    padding-left: 30px;
+  }
+  .timeline-split .timeline-info, .timeline-centered .timeline-info {
+    padding-right: 30px;
+  }
+  .timeline-split .period .timeline-title, .timeline-centered .period .timeline-title {
+    position: relative;
+    left: -45px;
+  }
+}
+
+/*----------------------------------------------
+    MOD: TIMELINE CENTERED
+----------------------------------------------*/
+@media (min-width: 1000px) {
+  .timeline-centered,
+  .timeline-centered .timeline-item,
+  .timeline-centered .timeline-info,
+  .timeline-centered .timeline-marker,
+  .timeline-centered .timeline-content {
+    display: block;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  .timeline-centered .timeline-item {
+    padding-bottom: 40px;
+    overflow: hidden;
+  }
+  .timeline-centered .timeline-marker {
+    position: absolute;
+    left: 50%;
+    margin-left: -7.5px;
+  }
+  .timeline-centered .timeline-info,
+  .timeline-centered .timeline-content {
+    width: 50%;
+  }
+  .timeline-centered > .timeline-item:nth-child(odd) .timeline-info {
+    float: left;
+    text-align: right;
+    padding-right: 30px;
+  }
+  .timeline-centered > .timeline-item:nth-child(odd) .timeline-content {
+    float: right;
+    text-align: left;
+    padding-left: 30px;
+  }
+  .timeline-centered > .timeline-item:nth-child(even) .timeline-info {
+    float: right;
+    text-align: left;
+    padding-left: 30px;
+  }
+  .timeline-centered > .timeline-item:nth-child(even) .timeline-content {
+    float: left;
+    text-align: right;
+    padding-right: 30px;
+  }
+  .timeline-centered > .timeline-item.period .timeline-content {
+    float: none;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .timeline-centered .timeline-item.period {
+    padding: 50px 0 90px;
+  }
+  .timeline-centered .period .timeline-marker:after {
+    height: 30px;
+    bottom: 0;
+    top: auto;
+  }
+  .timeline-centered .period .timeline-title {
+    left: auto;
+  }
+}
+
+/*----------------------------------------------
+    MOD: MARKER OUTLINE
+----------------------------------------------*/
+.marker-outline .timeline-marker:before {
+  background: transparent;
+  border-color: #FF6B6B;
+}
+.marker-outline .timeline-item:hover .timeline-marker:before {
+  background: #FF6B6B;
+}
+.container-fluid .row {
+  padding: 0 0 4em 0;
+}
+.container-fluid .row:nth-child(even) {
+  background: #F1F4F5;
+}
+
+.skills{
+	width:100%;
+	align-content: center;
+	align-self: center;
+	padding: 0 20px;
+}
+
+.skill-name{
+	font-size: 18px;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin: 20px 0
+}
+
+.skill-bar{
+	height: 20px;
+	background-color: #cacaca;
+	border-radius: 8px;
+}
+
+.skill-per{
+	height: 20px;
+	background-color: #ff6b6b;
+	border-radius: 8px;
+	width: 0%;
+	position: relative;
+}
+
+.skill-per::before{
+	content: attr(per);
+	position: absolute;
+	padding: 4px 6px;
+	background-color: #000;
+	color: #fff;
+	font-size: 12px;
+	border-radius: 4px;
+	top: -35px;
+	right:0;
+	transform: translateX(50%);
+}
+.skill-per::after{
+	content: '';
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	background-color: #000;
+	top:-16px;
+	right:0;
+	transform: translateX(50%) rotate(45deg);
+	border-radius: 2px;
+}
+.contact{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	position: relative;
+	min-height: 60vh;
+	padding: 50px 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background:url(contact.jpg);
+	background-size: cover;
+}
+
+.contact .content{
+	max-width: 800px;
+	text-align: center;
+}
+
+.contact .content h2{
+	font-size: 36px;
+	font-weight: 500;
+	color:#000;
+}
+
+.contact .content p{
+
+	font-weight: 300;
+	color:#000;
+}
+
+.container .contactInfo{
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+}
+.container .contactInfo .Box{
+	position: relative;
+	padding: 20px 0;
+	display: flex;
+}
+.container .contactInfo .Box .icon{
+	min-width: 60px;
+	height: 60px;
+	background: #fff;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	border-radius: 50%;
+	font-size:22px; 
+}
+.container .contactInfo .Box .text{
+	display: flex;
+	margin-left: 20px;
+	font-size: 16px;
+	color: #000;
+	flex-direction: column;
+	font-weight: 300;
+}
+.container .contactInfo .Box .text h3{
+	font-weight: 500;
+	color: #FF6B6B;
+}
+.contactForm{
+	width: 60%;
+	padding:40px;
+	background: #fff;
+}
+.contactForm h2{
+	font-size: 30px;
+	color: #FF6B6B;
+	font-weight: 500;
+}
+.contactForm .inputBox{
+	position: relative;
+	width: 100%;
+	margin-top: 10px;
+}
+.contactForm .inputBox input,
+.contactForm .inputBox textarea
+{
+	width: 100%;
+	padding: 8px 0;
+	font-size: 16px;
+	margin: 10px 0;
+	border: none;
+	border-bottom: 2px solid #333;
+	outline: none;
+	resize: none;
+}
+
+.contactForm .inputBox span{
+	position: absolute;
+	left: 0;
+	padding: 5px 0;
+	margin: 10px 0;
+	font-size: 16px;
+	pointer-events: none;
+	transition: 0.5s;
+	color:#666;
+}
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span
+{
+	color:#e91e63;
+	font-size: 12px;
+	transform: translateY(-20px);
+}
+
+.contactForm .inputBox input[type="submit"]{
+	width: 100px;
+	background: #FF6B6B;
+	color:#fff;
+	border:none;
+	cursor: pointer;
+	padding: 10px;
+	font-size: 18px;
+}
