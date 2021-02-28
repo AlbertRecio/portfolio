@@ -1,24 +1,19 @@
 <?php
+   if(isset($_POST['submit'])){
+   $name = $_POST['name'];
+   $subject = " Job Information";
+   $mailfrom = $_POST['email'];
+   $number = $_POST['number'];
+   $message = $_POST['message'];
 
-	$name = $_POST['name'];
-	$mailfrom = $_POST['email'];
-	$message = $_POST['message'];
-	$number = $_POST['number'];
-	
-	$emailSubject = "Job Information";
 
-	$mailBody = "User Name: ". $name.". \n".
-				"User Email: ". $mailfrom.".\n".
-				"User message: ". $message.".\n".
-				"User Number: ". $number.".\n";
+   $mailTo = "recio_albert@yahoo.com";
+   $headers = "From:".$mailfrom;
 
-	$mailTo = "recio_albert@yahoo.com";
+   $message = "You have received an e-mail from".$name."\n\n".$message."Here is the number to contact the company".$number;
 
-	$headers = "From: ".$mailfrom;
+   mail($mailTo,$subject,$message,$headers);
+   header("Location: index.html?mailsend");
 
-	$headers .= "Reply To". $mailfrom;
+	}
 
-	mail($mailTo,$emailSubject,$mailBody,$headers);
-
-	header("Locations: index.html");
-?>
