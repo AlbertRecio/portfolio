@@ -408,7 +408,7 @@ section{
 	justify-content: center;
 	align-items: center;
 	display: flex;
-	min-height:50vh;
+	min-height:65vh;
 	
 }
 section::before{
